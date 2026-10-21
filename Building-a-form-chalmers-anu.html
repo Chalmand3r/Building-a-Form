@@ -1,11 +1,84 @@
-<head><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Building a Form</title>
+    <style>
+        body {background-color: azure;
+        margin: auto}
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Information</h1>
+        <p> Please Enter Contact Information</p>
+        <form>
+<fieldset>
+    <legend>Contact Information</legend>
+    <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+<br></br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+<br></br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+</fieldset> 
+<br>   
+
+
+    </header>
+
+    <fieldset>
+    <legend>Feedback Category</legend>
+    <label for="category">Feedback Category:</label>
+    <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="report/fraud">report/fraud</option>
+        <option value="website">website</option>
+        <option value="email">email</option>
+        <option value="customer service">customer service</option>
+</select>
+<br>
+
+<p>Preferred Contact Method:</p>
+<input type="radio" id="email" name="contactMethod" value="email">
+<label for="email">Email</label>
+
+<input type="radio" id="phone" name="contactMethod" value="phone">
+<label for="phone">Phone</label>
+
+<input type="radio" id="text" name="contactMethod" value="text">
+<label for="text">Text Message</label>
+<br>
+
+<p>Additional Points of Concern:</p>
+
+    <input type="checkbox" id="userInterface" name="features" value="userInterface">
+    <label for="userInterface">User Interface</label>
+
+    <input type="checkbox" id="website" name="features" value="website">
+    <label for="website">Website</label>
+
+    <input type="checkbox" id="customerService" name="features" value="customerService">
+    <label for="customerService">Customer Service</label>
+
+    <input type="checkbox" id="other" name="features" value="other">
+    <label for="other">Other</label>
+<br>
+<br>
+<label for="comments">Comments: Please explan.</label><br>
+<textarea id="comments" name="comments" rows="10" cols="160" placeholder="Type Message Here." required></textarea>
+
+
+    </fieldset>
+<button type="Submit">Send Message</button>
+<button type="Reset">Clear Form</button>
+</form>
 </body>
-</html></head>
+    
+</html>
